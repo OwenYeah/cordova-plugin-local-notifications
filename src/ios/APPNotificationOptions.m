@@ -485,7 +485,10 @@ static NSInteger WEEKDAYS[8] = { 0, 2, 3, 4, 5, 6, 7, 1 };
 
     for (NSString* key in every) {
         long value = [[every valueForKey:key] longValue];
-
+        
+        if ([key isEqualToString:@"second"]) {
+            date.second = value;
+        } else
         if ([key isEqualToString:@"minute"]) {
             date.minute = value;
         } else
