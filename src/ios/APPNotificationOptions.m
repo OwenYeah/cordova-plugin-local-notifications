@@ -534,7 +534,7 @@ static NSInteger WEEKDAYS[8] = { 0, 2, 3, 4, 5, 6, 7, 1 };
 - (NSString*) soundNameForAsset:(NSString*)path
 {
     return [path stringByReplacingOccurrencesOfString:@"file:/"
-                                           withString:@"www"];
+                                           withString:@"public"];
 }
 
 /**
@@ -651,7 +651,7 @@ static NSInteger WEEKDAYS[8] = { 0, 2, 3, 4, 5, 6, 7, 1 };
 
     NSString* absPath;
     absPath = [path stringByReplacingOccurrencesOfString:@"file:/"
-                                              withString:@"/www"];
+                                              withString:@"/public"];
 
     absPath = [bundlePath stringByAppendingString:absPath];
 
