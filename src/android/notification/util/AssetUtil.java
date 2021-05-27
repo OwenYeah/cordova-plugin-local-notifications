@@ -125,7 +125,7 @@ public final class AssetUtil {
      * @return URI pointing to the given path.
      */
     private Uri getUriFromAsset(String path) {
-        String resPath  = path.replaceFirst("file:/", "www")
+        String resPath  = path.replaceFirst("file:/", "public")
                 .replaceFirst("\\?.*$", "");
         String fileName = resPath.substring(resPath.lastIndexOf('/') + 1);
         File file       = getTmpFile(fileName);
